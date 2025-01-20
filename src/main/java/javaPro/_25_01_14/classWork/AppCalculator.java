@@ -13,6 +13,7 @@ import java.util.Scanner;
 public class AppCalculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Input numbers with operators for calculating: ");
         String input = scanner.nextLine();
 
         Calculator calculator = new Calculator();
