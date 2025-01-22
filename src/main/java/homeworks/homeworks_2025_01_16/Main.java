@@ -16,10 +16,12 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Input lenght for Fibonachi");
+        System.out.println("Input length for Fibonacci");
         int num  = scanner.nextInt();
-        Fibonachi fibonachi = new Fibonachi();
-        System.out.println(fibonachi.fibonacciSequence(num));
+        FibonacciSequence fibonacci = new FibonacciSequence(num);
+        System.out.println("Fibonacci using 'while': " + fibonacci.fibonacciSequenceWhile(num));
+        System.out.println("Fibonacci using 'do-while': " + fibonacci.fibonacciSequenceDoWhile(num));
+        System.out.println("Fibonacci using 'for': " + fibonacci.fibonacciSequenceFor(num));
 
 
 
