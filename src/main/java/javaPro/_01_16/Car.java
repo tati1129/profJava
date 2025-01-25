@@ -1,4 +1,4 @@
-package javaPro._25_01_16;
+package javaPro._01_16;
 
 public class Car {
     private String brand;

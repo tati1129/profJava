@@ -6,9 +6,10 @@ public class Cat extends Animal{
     private String noise = "Meow";
 
     public Cat(String food, String location, String noise, String color, String breed) {
-        super(food, location, noise);
+        super(food, location);
         this.color = color;
         this.breed = breed;
+        this.noise = noise;
 
     }
 

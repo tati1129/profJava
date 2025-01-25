@@ -1,4 +1,4 @@
-package javaPro._25_01_21;
+package javaPro._01_21;
 
 public class Cat extends Animal{
     private String name;

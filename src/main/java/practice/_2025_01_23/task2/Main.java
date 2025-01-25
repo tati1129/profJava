@@ -9,6 +9,7 @@ public class Main {
 
         for (Animal animal : animals){
             vet.treatAnimal(animal);
+            animal.makeNoise();
         }
     }
 }

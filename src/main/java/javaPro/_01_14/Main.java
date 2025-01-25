@@ -1,4 +1,4 @@
-package javaPro._25_01_14;
+package javaPro._01_14;
 
 public class Main {
     public static void main(String[] args) {

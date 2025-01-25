@@ -1,4 +1,4 @@
-package homeworks.homeworks_2025_01_16;
+package homeworks._01_16;
 
 import java.util.Scanner;
 

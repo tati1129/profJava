@@ -7,16 +7,17 @@ public class Horse extends Animal {
 
 
     public Horse(String food, String location, String noise, String color, int age) {
-        super(food, location, noise);
+        super(food, location);
         this.color = color;
         this.age = age;
+        this.noise = noise;
     }
 
 
 
     @Override
     public void makeNoise() {
-        System.out.println("Horse male noise " + noise);
+        System.out.println("Horse make noise " + noise);
     }
 
     @Override

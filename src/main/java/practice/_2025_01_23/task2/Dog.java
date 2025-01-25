@@ -5,17 +5,14 @@ public class Dog extends Animal{
     private double weight;
     private String noise = "Gav-gav";
 
-    public Dog(String food, String location, String noise, String breed, double weight) {
-        super(food, location, noise);
+    public Dog(String food, String location, String breed, String noise, double weight) {
+        super(food, location);
         this.breed = breed;
         this.weight = weight;
+        this.noise = noise;
 
     }
 
-    @Override
-    public void sleep() {
-       super.sleep();
-    }
 
     @Override
     public void eat() {
@@ -24,7 +21,7 @@ public class Dog extends Animal{
 
     @Override
     public void makeNoise() {
-        System.out.println(noise);
+        System.out.println("Dog make noise" + noise);
     }
 
     @Override

@@ -1,4 +1,4 @@
-package homeworks.homeworks_2025_01_21;
+package homeworks._01_21;
 /*
 Написать программу, которая принимает на вход три целых числа:
 *1. algorithmld - тип алгоритма
