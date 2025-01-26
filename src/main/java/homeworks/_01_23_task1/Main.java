@@ -1,4 +1,8 @@
-package homeworks._01_23;
+package homeworks._01_23_task1;
+
+import homeworks._01_23_task1.Card;
+import homeworks._01_23_task1.ChangeBalance;
+import homeworks._01_23_task1.Converter;
 
 /*
 Создайте класс Карта, которая содержит имя пользователя и баланс
@@ -13,25 +17,26 @@ package homeworks._01_23;
  */
 public class Main {
     public static void main(String[] args) {
-        Card card1 = new Card("Ivan Petrov", 4000);
+     Card card1 = new Card("Ivan Petrov", 4000);
         Card card2 = new Card("Inna Sue");
 
+       ChangeBalance operations = new ChangeBalance() {
+        };
 
-
-        card1.addMoney(500);
-        card1.extractMoney( 200);
-        card2.checkBalance();
+        operations.addMoney(card1, 500);
+        operations.extractMoney(card1, 200);
+        operations.checkBalance(card2);
 
         String euro = "EURO";
         String usd = "USD";
         double rateUSD = 42.75;
         double rateEURO = 44.13;
 
+        Converter converter = new Converter(){};
 
-
-        card1.balanceInCurrency(rateEURO, euro);
-        card1.balanceInCurrency(rateUSD, usd);
-        card2.balanceInCurrency(rateUSD, usd);
+        converter.balanceInCurrency(card1,rateEURO, euro);
+        converter.balanceInCurrency(card1,rateUSD, usd);
+        converter.balanceInCurrency(card2,rateUSD, usd);
 
     }
 

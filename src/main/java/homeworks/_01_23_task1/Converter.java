@@ -1,4 +1,6 @@
-package homeworks._01_23;
+package homeworks._01_23_task1;
+
+
 
 public interface Converter {
 

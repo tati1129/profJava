@@ -1,6 +1,6 @@
 package homeworks._01_23;
 
-public class Card implements ChangeBalance, Converter {
+public class Card {
 
     private String userName;
     private double balance;
@@ -29,6 +29,31 @@ public class Card implements ChangeBalance, Converter {
     public void setBalance(double balance) {
         this.balance = balance;
     }
+    public void addMoney(double money) {
+        setBalance(getBalance() + money);
+        System.out.println("Added to the account: " + money);
+    };
 
+    public void extractMoney(double money) {
+        if (getBalance() < money) {
+            throw new IllegalArgumentException("Not enought money on balance");
+        }
+        setBalance(getBalance() - money);
+        System.out.println("Withdrawn from the account:" + money);
+    };
 
+  public void checkBalance() {
+        double balance = getBalance();
+        System.out.println("Current balance: " + balance);
+    };
+
+  public void balanceInCurrency( double rate, String currency) {
+      if (rate > 0) {
+          double currentValue = Math.round(getBalance() * rate * 100.0) / 100.0;
+          System.out.println("Your balance in  " + currency + " : " + currentValue);
+      } else {
+          throw new IllegalArgumentException("Incorrect rate");
+      }
+
+  }
 }
