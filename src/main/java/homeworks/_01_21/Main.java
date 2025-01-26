@@ -16,5 +16,61 @@ package homeworks._01_21;
 
  */
 
+
+import java.util.Scanner;
+
 public class Main {
+
+    public static void main(String[] args) {
+
+        FibonacciSequence fibonacci = new FibonacciSequence();
+        Factorial factorial = new Factorial();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Input type algorithm. 1 - Fibonacci, 2 - Factorial");
+        int typeAlgorithm  = scanner.nextInt();
+
+        System.out.println("Choose LoорТуре. 1 -  while, 2 - do-while, 3 - for");
+        int loopType = scanner.nextInt();
+
+        System.out.println("Input the parameter (n): ");
+        int parametr = scanner.nextInt();
+
+        switch (typeAlgorithm){
+            case 1:
+                System.out.println("fibonacci Sequence");
+                switch (loopType){
+                    case 1:
+                        System.out.println(fibonacci.fibonacciSequenceWhile(parametr));
+                        break;
+                    case 2:
+                        System.out.println(fibonacci.fibonacciSequenceDoWhile(parametr));
+                        break;
+                    case 3:
+                        System.out.println(fibonacci.fibonacciSequenceFor(parametr));
+                        break;
+                    default:
+                        System.out.println("Invalid loop type...");
+                }
+                break;
+
+            case 2:
+                System.out.println("Factorial: ");
+                switch (loopType){
+                    case 1:
+                        System.out.println(factorial.factoriaWhile(parametr));
+                        break;
+                    case 2:
+                        System.out.println(factorial.factorialDoWhile(parametr));
+                        break;
+                    case 3:
+                        System.out.println(factorial.factorialFor(parametr));
+                        break;
+                    default:
+                        System.out.println("Invalid loop type...");
+                }
+
+        }
+
+    }
 }
