@@ -23,8 +23,7 @@ public class App {
                 WaterAnimal waterAnimal = (WaterAnimal) animal;
                 waterAnimal.swim();
             } else if (animal instanceof EarthAnimal) {
-                EarthAnimal earthAnimal = (EarthAnimal) animal;
-                earthAnimal.walk();
+                ((EarthAnimal) animal).walk();
                 if (animal instanceof Horse) {
                     ((Horse) animal).jump();
                 }
