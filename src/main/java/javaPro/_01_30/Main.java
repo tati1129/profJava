@@ -1,6 +1,6 @@
 package javaPro._01_30;
 
-import practice._01_24.Cat;
+
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -49,9 +49,9 @@ public class Main {
     }
 
     private static void outOfMemoryError() {
-        List<Cat> cats = new ArrayList<>();
+        //List<Cat> cats = new ArrayList<>();
         while (true) {
-            cats.add(new Cat("Boston", 7, "ginger"));
+           // cats.add(new Cat("Boston", 7, "ginger"));
         }
     }
 

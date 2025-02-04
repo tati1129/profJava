@@ -3,7 +3,7 @@ package javaPro._01_30.task1;
 /**
  * +
  * Alexandra Kriviz left
- *
+ * <p>
  * teacher15 starta.university 11:41
  * Битва за средиземье. Властелин колец
  * Создать систему классов, представляющих различные расы из Властелина Колец: Люди, Эльфы, Гномы, Орки, Варги, Назгулы
@@ -21,4 +21,40 @@ package javaPro._01_30.task1;
  * Создать отряды “сил Мордора” и “защитников Средиземья”. Устроить битву между двумя отрядами, битва идёт до тех пор пока в одном из отрядов не останется живых героев.
  */
 public class Main {
+    public static void main(String[] args) {
+        Human human1 = new Human("Human1", 100, 60, 3, 2, 40);
+        Elf elf1 = new Elf("Elf1", 80, 70, 2, 20);
+        Dwarf dwarf1 = new Dwarf("Dwarf1", 150, 110, 5, 2);
+        Orc orc1 = new Orc("Orc1", 110, 100, 2);
+        Warg warg1 = new Warg("Warg1", 80, 90, 2, 7);
+        Nazgul nazgul1 = new Nazgul("Nazgul1", 150, 120, 6, 10);
+        Army army1 = new Army(new Hero[]{human1, elf1, dwarf1});
+        Army army2 = new Army(new Hero[]{nazgul1, orc1, warg1});
+
+        //elf.attack(nazgul);
+
+        fight(army1, army2);
+    }
+
+    public static void fight(Army army1, Army army2) {
+        System.out.println("Start buttle!");
+
+        while (army1.isAlive() && army2.isAlive()) {
+
+            System.out.println("Army 1 attack!");
+            army1.attack(army2);
+            System.out.println("Army 2 attack!");
+            army2.attack(army1);
+
+
+            System.out.println("War is finshed!");
+            if (army1.isAlive()) {
+                System.out.println("Army 1 is win!");
+            } else if (army2.isAlive()) {
+                System.out.println("Army 2 is win!");
+            } else {
+                System.out.println("No winners!");
+            }
+        }
+    }
 }
