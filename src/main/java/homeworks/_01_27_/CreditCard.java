@@ -30,19 +30,23 @@ public class CreditCard extends Card {
         double availableValue = balance + creditLimit;
         if (money > availableValue) {
             throw new ExceedsCreditLimitException("Transaction denied. Exceeds credit limit.");
-        }else if (money > balance) {
-            throw new InsufficientFundsException("Insufficient funds. Cannot withdraw " + money);
-        } else {
+        }
+        if (money <= balance) {
+            // Если хватает только основного баланса
             balance -= money;
+            System.out.println("Withdrawal successful. New balance: " + balance);
+        } else {
+            // Если денег на балансе не хватает, снимаем с кредитного лимита
+            double remainingAmount = money - balance;
+            creditLimit -= remainingAmount;
+            balance = 0;  // Баланс теперь 0, так как сняли все деньги с баланса
 
-            if (balance < 0) {
-                System.out.println("Withdrawal successful. Your debt: " + (-balance));
-            } else {
-                System.out.println("Withdrawal successful. New balance: " + balance);
-            }
+            System.out.println("Withdrawal successful. Your debt: " + (-creditLimit));  // Показываем долг, если был снят кредит
+            System.out.println("Remaining credit limit: " + creditLimit);
+        }
         }
     }
 
 
-}
+
 
