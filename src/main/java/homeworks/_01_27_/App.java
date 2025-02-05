@@ -1,6 +1,8 @@
 package homeworks._01_27_;
 
 
+import homeworks._01_27_.exception.InvalidPinException;
+
 /**
  * Домашнее, на базе прошлой домашней работы
  * Сделать класс Card родителем,
@@ -11,7 +13,7 @@ package homeworks._01_27_;
  */
 
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvalidPinException {
         CreditCard creditCardUser1 = new CreditCard("Antony", 2000.0, 1111, 5000);
         DebitCard debitCardUser1 = new DebitCard("Antony", 3500.0, 1111);
 
