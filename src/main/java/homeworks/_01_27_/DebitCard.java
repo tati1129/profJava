@@ -1,5 +1,7 @@
 package homeworks._01_27_;
 
+import homeworks._01_27_.exception.InsufficientFundsException;
+
 public class DebitCard extends Card {
 
     public DebitCard(String owner, double balance, int pinKod) {
@@ -13,7 +15,7 @@ public class DebitCard extends Card {
             System.out.println("Withdrawal: " + money);
             System.out.println("Withdrawal successful. New balance: " + balance);
         } else {
-            System.out.println("Insufficient funds. Cannot withdraw " + money);
+            throw new InsufficientFundsException("Insufficient funds. Cannot withdraw " + money);
 
         }
     }

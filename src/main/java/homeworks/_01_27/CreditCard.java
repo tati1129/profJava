@@ -1,5 +1,8 @@
 package homeworks._01_27;
 
+import homeworks._01_27_.exception.ExceedsCreditLimitException;
+import homeworks._01_27_.exception.InvalidPinException;
+
 public class CreditCard extends Card {
 
     private double creditLimit;
@@ -14,11 +17,13 @@ public class CreditCard extends Card {
         this.creditLimit = 50000;
     }
 
+
+
     @Override
     public void extractMoney(double money) {
         double availableValue = getBalance() + creditLimit;
         if (money > availableValue) {
-            System.out.println("Transaction denied. Exceeds credit limit.");
+            throw new ExceedsCreditLimitException("Transaction denied. Exceeds credit limit.");
         } else {
             double newBalance = getBalance() - money;
             setBalance(newBalance);

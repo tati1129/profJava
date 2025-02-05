@@ -1,6 +1,7 @@
 package javaPro._02_04;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -40,15 +41,23 @@ public class ListExample {
 
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
-        };
+        }
 
-        for (Object object : list){
-            System.out.println(object);
+        for (Object o : list) {
+            System.out.println(o);
+        }
+
+        Iterator iterator = list.iterator();
+
+
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
         }
 
 
-        /// ////////////
-        LinkedList linkedList = new LinkedList();
+        ///////////////////////////////////////////
+
+/*        LinkedList linkedList = new LinkedList();
 
         linkedList.add(0);
         linkedList.add(1);
@@ -63,5 +72,7 @@ public class ListExample {
         System.out.println(linkedList);
         System.out.println(linkedList.poll());
         System.out.println(linkedList);
+
+        linkedList.add(5, 15);*/
     }
 }

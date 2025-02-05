@@ -1,5 +1,6 @@
 package homeworks._01_27_;
 
+import homeworks._01_27_.exception.InvalidDepositAmountException;
 import homeworks._01_27_.exception.InvalidPinException;
 
 public abstract class Card {
@@ -23,12 +24,11 @@ public abstract class Card {
     }
 
     public void addMoney(double money) {
-        if (money > 0) {
-            balance += money;
-            System.out.println("Deposited: " + money);
-        } else {
-            System.out.println("Invalid deposit amount.");
+        if (money <= 0) {
+            throw new InvalidDepositAmountException("Invalid deposit amount: " + money);
         }
+        balance += money;
+        System.out.println("Deposited: " + money);
     }
 
 

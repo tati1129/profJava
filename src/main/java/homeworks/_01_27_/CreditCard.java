@@ -1,6 +1,8 @@
 package homeworks._01_27_;
 
 
+import homeworks._01_27_.exception.ExceedsCreditLimitException;
+import homeworks._01_27_.exception.InsufficientFundsException;
 import homeworks._01_27_.exception.InvalidPinException;
 
 public class CreditCard extends Card {
@@ -27,7 +29,9 @@ public class CreditCard extends Card {
     public void extractMoney(double money) {
         double availableValue = balance + creditLimit;
         if (money > availableValue) {
-            System.out.println("Transaction denied. Exceeds credit limit.");
+            throw new ExceedsCreditLimitException("Transaction denied. Exceeds credit limit.");
+        }else if (money > balance) {
+            throw new InsufficientFundsException("Insufficient funds. Cannot withdraw " + money);
         } else {
             balance -= money;
 
