@@ -1,17 +1,20 @@
 package homeworks._01_27_;
 
 
+import homeworks._01_27_.exception.InvalidPinException;
+
 public class Atm {
 
     private Card card;
 
     // Метод для "вставки" карты в банкомат (можно передавать пин-код сразу)
-    public boolean setCard(CreditCard card, int enteredPin) {
-        if (card.validatePin(enteredPin)) {
+    public boolean setCard(CreditCard card, int enteredPin) throws InvalidPinException {
+        try {
+            card.validatePin(enteredPin);  // Вызываем метод валидации пин-кода, который может выбросить исключение
             this.card = card;
             return true;
-        } else {
-            System.out.println("Invalid PIN.");
+        } catch (InvalidPinException e) {
+            System.out.println("Invalid PIN: " + e.getMessage());  // Обрабатываем исключение
             return false;
         }
     }

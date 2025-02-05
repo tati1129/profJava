@@ -1,5 +1,7 @@
 package homeworks._01_27_;
 
+import homeworks._01_27_.exception.InvalidPinException;
+
 public abstract class Card {
 
     protected String owner;
@@ -14,8 +16,10 @@ public abstract class Card {
 
     }
 
-    protected boolean validatePin(int enteredPin) {
-        return this.pinCod == enteredPin;
+    protected void validatePin(int enteredPin) throws InvalidPinException {
+        if (this.pinCod != enteredPin) {
+            throw new InvalidPinException("Invalid PIN");
+        }
     }
 
     public void addMoney(double money) {

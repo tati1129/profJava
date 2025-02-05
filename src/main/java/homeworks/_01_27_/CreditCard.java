@@ -1,8 +1,11 @@
 package homeworks._01_27_;
 
 
+import homeworks._01_27_.exception.InvalidPinException;
+
 public class CreditCard extends Card {
 
+    private int pin;
     private double creditLimit;
 
     public CreditCard(String owner, double balance, int pinKod, double creditLimit) {
@@ -13,6 +16,11 @@ public class CreditCard extends Card {
     public CreditCard(String owner, double balance, int pinKod) {
         super(owner, balance, pinKod);
         this.creditLimit = 50000;
+    }
+
+    @Override
+    public void validatePin(int enteredPin) throws InvalidPinException {
+        super.validatePin(enteredPin);
     }
 
     @Override
