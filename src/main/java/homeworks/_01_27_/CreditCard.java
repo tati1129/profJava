@@ -10,15 +10,12 @@ public class CreditCard extends Card {
     private int pin;
     private double creditLimit;
 
-    public CreditCard(String owner, double balance, int pinKod, double creditLimit) {
-        super(owner, balance, pinKod);
+    public CreditCard(String owner, double balance, int pinCod, String cardType, double creditLimit) {
+        super(owner, balance, pinCod, cardType);
         this.creditLimit = creditLimit;
     }
 
-    public CreditCard(String owner, double balance, int pinKod) {
-        super(owner, balance, pinKod);
-        this.creditLimit = 50000;
-    }
+
 
     @Override
     public void validatePin(int enteredPin) throws InvalidPinException {

@@ -3,8 +3,8 @@ package homeworks._01_27;
 
 public class DebitCard extends Card {
 
-    public DebitCard(String userName, double balance, int pinKod) {
-        super(userName, balance, pinKod);
+    public DebitCard(String userName, double balance, int pinCod) {
+        super(userName, balance, pinCod);
     }
 
     @Override

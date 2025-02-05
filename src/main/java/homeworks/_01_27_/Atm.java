@@ -9,7 +9,7 @@ public class Atm {
 
 
     // Метод для "вставки" карты в банкомат (можно передавать пин-код сразу)
-    public boolean setCard(CreditCard card, int enteredPin) throws InvalidPinException {
+    public boolean setCard(Card card, int enteredPin){
             card.validatePin(enteredPin);  // Вызываем метод валидации пин-кода, который может выбросить исключение
             this.card = card;
             return true;
@@ -32,7 +32,7 @@ public class Atm {
 
     // Метод для извлечения карты
     public void ejectCard(){
-        System.out.println("Card ejected: " + card.owner);
+        System.out.println("Card ejected: " + card.toString());
         card = null;
     }
 

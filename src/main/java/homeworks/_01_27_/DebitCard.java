@@ -4,8 +4,8 @@ import homeworks._01_27_.exception.InsufficientFundsException;
 
 public class DebitCard extends Card {
 
-    public DebitCard(String owner, double balance, int pinKod) {
-        super(owner, balance, pinKod);
+    public DebitCard(String owner, double balance, int pinKod, String cardType) {
+        super(owner, balance, pinKod, cardType);
     }
 
     @Override
