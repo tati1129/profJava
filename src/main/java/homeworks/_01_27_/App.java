@@ -1,17 +1,5 @@
 package homeworks._01_27_;
 
-import homeworks._01_27.Atm;
-import homeworks._01_27.CreditCard;
-import homeworks._01_27.DebitCard;
-
-/*
-Создайте класс Карта, которая содержит имя пользователя и баланс
-Сделайте несколько конструкторов (перегрузка) для:
--создания карты с именем пользователя и балансом
--создания карты с именем пользователя
-Сделайте методы для пополнения/снятия/отображения баланса
-Добавьте дополнительный метод для отображения баланса в различных валютах, передавая курс валюты
-В методе мэйн проверить работу всех методов класса Card
 
 /**
  * Домашнее, на базе прошлой домашней работы
@@ -24,17 +12,13 @@ import homeworks._01_27.DebitCard;
 
 public class App {
     public static void main(String[] args) {
-        homeworks._01_27.CreditCard creditCardUser1 = new homeworks._01_27.CreditCard("Antony", 2000.0, 1111, 5000);
-        homeworks._01_27.DebitCard debitCardUser1 = new homeworks._01_27.DebitCard("Antony", 3500.0, 1111);
+        CreditCard creditCardUser1 = new CreditCard("Antony", 2000.0, 1111, 5000);
+        DebitCard debitCardUser1 = new DebitCard("Antony", 3500.0, 1111);
 
-        homeworks._01_27.CreditCard creditCardUser2 = new CreditCard("Mary", 3000.0, 2222);
-        homeworks._01_27.DebitCard debitCardUser2 = new DebitCard("Mary", 15000.0, 2222);
+        CreditCard creditCardUser2 = new CreditCard("Mary", 3000.0, 2222);
+        DebitCard debitCardUser2 = new DebitCard("Mary", 15000.0, 2222);
 
-
-        homeworks._01_27.Atm atm = new Atm();
-
-
-
+        Atm atm = new Atm();
 
         atm.setCard(creditCardUser1, 1111);
         atm.extractMoney(1000);         // Снимаем деньги (1000)
@@ -43,6 +27,4 @@ public class App {
         atm.ejectCard();                // Извлекаем карту
 
     }
-
-
 }

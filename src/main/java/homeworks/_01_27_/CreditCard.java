@@ -1,6 +1,5 @@
 package homeworks._01_27_;
 
-import homeworks._01_27.Card;
 
 public class CreditCard extends Card {
 
@@ -31,7 +30,6 @@ public class CreditCard extends Card {
             }
         }
     }
-
 
 
 }

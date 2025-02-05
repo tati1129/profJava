@@ -1,8 +1,5 @@
 package homeworks._01_27_;
 
-
-import homeworks._01_27.Card;
-
 public class DebitCard extends Card {
 
     public DebitCard(String owner, double balance, int pinKod) {
