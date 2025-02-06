@@ -18,11 +18,6 @@ public class CreditCard extends Card {
 
 
     @Override
-    public void validatePin(int enteredPin) throws InvalidPinException {
-        super.validatePin(enteredPin);
-    }
-
-    @Override
     public void extractMoney(double money) {
         double availableValue = balance + creditLimit;
         if (money > availableValue) {
