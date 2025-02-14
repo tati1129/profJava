@@ -1,4 +1,4 @@
-package practice._02_11;
+package javaPro._02_11;
 
 import java.util.*;
 

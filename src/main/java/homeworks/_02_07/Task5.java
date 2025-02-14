@@ -15,19 +15,24 @@ import java.util.TreeSet;
 public class Task5 {
     public static void main(String[] args) {
         int num = 10;
+        int num1 = 7;
         TreeSet<Integer> intTreeSet = new TreeSet<>();
         intTreeSet.add(1);
         intTreeSet.add(11);
         intTreeSet.add(21);
-        intTreeSet.add(111);
+        intTreeSet.add(110);
         intTreeSet.add(10);
-        intTreeSet.add(5);
+        intTreeSet.add(50);
 
 //        System.out.println(intTreeSet);
 //
-//        isContainNumber(intTreeSet, num);
-        System.out.println("The biggest number from TreeSet  " + intTreeSet + " is : "+getBiggerNum(intTreeSet));
-        System.out.println("The smallest number from TreeSet  " + intTreeSet + " is : "+getSmallestNum(intTreeSet, num));
+////        isContainNumber(intTreeSet, num);
+//        System.out.println("The biggest number from TreeSet  " + intTreeSet + " is : " + getBiggerNum(intTreeSet));
+//        System.out.println("The smallest number from TreeSet  " + intTreeSet + " is : " + getSmallestNum(intTreeSet, num));
+
+        System.out.println(getEvenNumber(intTreeSet));
+        reverceTreeSet(intTreeSet);
+        System.out.println(getTreeSetMoreThanNum(intTreeSet, num1));
     }
 
     //20. Создать TreeSet. Из него: Найти заданное число 10, самое большое, самое маленькое Вывести все четные числа Получить список всех чисел в обратном порядке Получить список всех чисел меньше 7
@@ -50,11 +55,39 @@ public class Task5 {
 //        return false;
         }
     }
-    public  static int getBiggerNum(TreeSet<Integer> integers){
+
+    public static int getBiggerNum(TreeSet<Integer> integers) {
         return integers.last();
     }
-    public static int getSmallestNum(TreeSet<Integer> integers, int num){
+
+    public static int getSmallestNum(TreeSet<Integer> integers, int num) {
         return integers.first();
     }
 
+    public static TreeSet<Integer> getEvenNumber(TreeSet<Integer> integers) {
+        TreeSet<Integer> result = new TreeSet<>();
+        if (integers.isEmpty()) {
+            System.out.println("TreeSet is empty!");
+        } else {
+            for (Integer anInt : integers) {
+                if (anInt % 2 == 0) {
+                    result.add(anInt);
+                }
+            }
+        }
+        return result;
+    }
+    public static void reverceTreeSet(TreeSet<Integer> integers){
+
+        System.out.println(integers.descendingSet());
+    }
+    public  static TreeSet<Integer> getTreeSetMoreThanNum(TreeSet<Integer> integers, int num){
+        TreeSet<Integer> result = new TreeSet<>();
+        for (Integer anInt : integers){
+            if (anInt > num){
+                result.add(anInt);
+            }
+        }
+        return result;
+    }
 }

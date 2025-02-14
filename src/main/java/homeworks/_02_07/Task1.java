@@ -28,18 +28,18 @@ public class Task1 {
 //        int num = 0;
 
 
-//        System.out.println( countChar(strings));
-//        System.out.println(findListMoreThree(strings));
-//        System.out.println(getSum(integerList));
-//        System.out.println(integerList + " max: "+getMax(integerList));
-//        System.out.println(getMaxStrLength(strings));
-//
-//        System.out.println(intList1 + " is Sorted asc: " + isListSortedAsc(intList1));
-//        System.out.println(intList2 + " is Sorted asc: " + isListSortedAsc(intList2));
-//        System.out.println(integerList + " is Sorted asc: " + isListSortedAsc(integerList));
-//        System.out.println(intList1 + " is Sorted desc: " + isListSortedDesc(intList1));
-//        System.out.println(intList2 + " is Sorted desc: " + isListSortedDesc(intList2));
-//        System.out.println(integerList + " is Sorted desc: " + isListSortedDesc(integerList));
+        System.out.println( countChar(strings));
+        System.out.println(findListMoreThree(strings));
+        System.out.println(getSum(integerList));
+        System.out.println(integerList + " max: "+getMax(integerList));
+        System.out.println(getMaxStrLength(strings));
+
+        System.out.println(intList1 + " is Sorted asc: " + isListSortedAsc(intList1));
+        System.out.println(intList2 + " is Sorted asc: " + isListSortedAsc(intList2));
+        System.out.println(integerList + " is Sorted asc: " + isListSortedAsc(integerList));
+        System.out.println(intList1 + " is Sorted desc: " + isListSortedDesc(intList1));
+        System.out.println(intList2 + " is Sorted desc: " + isListSortedDesc(intList2));
+        System.out.println(integerList + " is Sorted desc: " + isListSortedDesc(integerList));
 
         System.out.println(integerList + "  divided on " + num + " " + findDividedOnNum(integerList, num));
 

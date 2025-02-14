@@ -1,28 +1,19 @@
 package practice._02_11;
 
 public class MyNode {
-    private Object value;
-    private MyNode next;
-    private MyNode previous;
+    private int value;
+    private  MyNode next;
 
-    public MyNode(Object value) {
+    public MyNode(int value) {
         this.value = value;
     }
 
-    public Object getValue() {
+    public int getValue() {
         return value;
     }
 
-    public void setValue(Object value) {
+    public void setValue(int value) {
         this.value = value;
-    }
-
-    public MyNode getPrevious() {
-        return previous;
-    }
-
-    public void setPrevious(MyNode previous) {
-        this.previous = previous;
     }
 
     public MyNode getNext() {
@@ -31,11 +22,5 @@ public class MyNode {
 
     public void setNext(MyNode next) {
         this.next = next;
-    }
-
-    public void setNext() {
-    }
-
-    public void setPrevious() {
     }
 }

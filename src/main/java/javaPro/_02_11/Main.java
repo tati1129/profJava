@@ -1,4 +1,4 @@
-package practice._02_11;
+package javaPro._02_11;
 
 import java.util.Arrays;
 
@@ -36,6 +36,16 @@ public class Main {
         myLinkedList.add(1);
         myLinkedList.add(3);
 
+
+
         System.out.println(myLinkedList);
+        myLinkedList.add(2,7);
+        System.out.println(myLinkedList);
+        myLinkedList.remove(0);
+        System.out.println(myLinkedList);
+Integer num = 7;
+        myLinkedList.remove(num);
+        System.out.println(myLinkedList);
+
     }
 }
