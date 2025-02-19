@@ -1,9 +1,6 @@
 package homeworks._02_07;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * 10. Перебрать LinkedList и найти самую короткую строку.
@@ -23,6 +20,7 @@ import java.util.List;
 public class Task3 {
     public static void main(String[] args) {
         List<String> strings = List.of("ASDCX", "sfaafkgzGKQUWZ", "sjhsjh", "we");
+        List<String> strings1 = List.of("ASDCX", "sfaafkgzGKQUWZ", "ASDCX", "sjhsjh", "we", "we");
         LinkedList<Job> jobs = new LinkedList<>();
         jobs.add(new Job("FE", 5500));
         jobs.add(new Job("BE", 5700));
@@ -31,21 +29,26 @@ public class Task3 {
         jobs.add(new Job("PR", 4500));
         int salary = 3000;
 
-        LinkedList<Integer> list = createList(1, 4, 3, 2, 1, 2, 2,1, 0);
-        int num1= 4;
-        int num2= 1;
+        LinkedList<Integer> list = createList(1, 4, 3, 2, 1, 2, 2, 1, 0);
+        int num1 = 4;
+        int num2 = 1;
+
 
         System.out.println("The shortest string from list  " + strings + " is :  '" + findShorterString(strings) + "' ");
 
         System.out.println(mergeStrings(strings));
 
         removeObjByCondition(jobs, salary);
-        System.out.println("Индекс первого вхождения с элементом = " + num1 + " => " +  getFirstImpact(list, num1));
-        System.out.println("Индекс первого вхождения с элементом = " + num2 + " => " +  getFirstImpact(list, num2));
-        System.out.println("Индекс  последнего вхождения с элементом = " + num1 + " => " +  getLastImpact(list, num1));
-        System.out.println("Индекс  последнего вхождения с элементом = " + num2 + " => " +  getLastImpact(list, num2));
+        System.out.println("Индекс первого вхождения с элементом = " + num1 + " => " + getFirstImpact(list, num1));
+        System.out.println("Индекс первого вхождения с элементом = " + num2 + " => " + getFirstImpact(list, num2));
+        System.out.println("Индекс  последнего вхождения с элементом = " + num1 + " => " + getLastImpact(list, num1));
+        System.out.println("Индекс  последнего вхождения с элементом = " + num2 + " => " + getLastImpact(list, num2));
 
 
+        System.out.println(reversList(strings));
+        System.out.println(reversList(list));
+        System.out.println(findDublicate(strings1));
+        System.out.println(getIndexStr(strings, "we"));
     }
 
     //10. Перебрать LinkedList и найти самую короткую строку.
@@ -116,6 +119,41 @@ public class Task3 {
         return linkedList.lastIndexOf(num);
     }
 
+    //14. Имеется лист. Написать метод, возвращающий этот же лист, в котором элементы расположены в обратном порядке.
+
+    public static <T> List<T> reversList(List<T> lists) {
+        List<T> reversedList = new ArrayList<>();
+
+        for (int i = lists.size() - 1; i >= 0; i--) {
+            reversedList.add(lists.get(i));
+        }
+        return reversedList;
+    }
+
+    //15. Найти все дубликаты в List<String> и вернуть их в виде нового списка.
+
+    public static List<String> findDublicate(List<String> stringList) {
+        Set<String> seen = new HashSet<>();
+        Set<String> result = new HashSet<>();
+        for (String str : stringList) {
+            if (!seen.add(str)) {
+                result.add(str);
+            }
+        }
+        ArrayList<String> dublicate = new ArrayList<>();
+        dublicate.addAll(result);
+        return dublicate;
+    }
+
+    //16. Проверить, содержит ли List<String> заданную строку и вернуть ее индекс. Если строка не найдена, вернуть -1.
+    public static int getIndexStr(List<String> stringList, String targetStr){
+        for (int i = 0; i < stringList.size(); i++) {
+            if (stringList.get(i).equals(targetStr)){
+                return i;
+            }
+        }
+        return -1;
+    }
 }
 
 
