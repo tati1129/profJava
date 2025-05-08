@@ -1,6 +1,6 @@
 package javaPro._02_18;
 
-import summary._01_24.Cat;
+
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,12 +13,13 @@ public class Main {
         Map<Person, Cat> personCatMap = new HashMap<>();
         personCatMap.put(person, cat);
 
-        System.out.println(personCatMap.get(person));
+        System.out.println(personCatMap.get(person).getName());
         System.out.println(person.hashCode() + " hashCod");
         System.out.println((person.hashCode() % 16 )+ " это номер бакета (индекс ячейки массива) " );
 
 
-        person.setAge(4);
+        //person.setAge(4);
+        person.setAge(3);
 
         System.out.println(person.hashCode() + " hashCod");
         System.out.println((person.hashCode() % 16 )+ " это номер бакета (индекс ячейки массива) " );
