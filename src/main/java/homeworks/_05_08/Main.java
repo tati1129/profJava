@@ -12,5 +12,6 @@ public class Main {
         System.out.println("float: " + data.numFloat);
         System.out.println("double: " + data.numDouble);
         System.out.println("long: " + data.numLong);
+
     }
 }
