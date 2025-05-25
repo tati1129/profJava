@@ -1,4 +1,4 @@
-package homeworks._20_05.todoList;
+package homeworks._05_20.todoList;
 
 public class DayOfWeek {
     private String day;

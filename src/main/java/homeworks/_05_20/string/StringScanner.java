@@ -1,4 +1,4 @@
-package homeworks._20_05.string;
+package homeworks._05_20.string;
 
 import javaPro3._05_20.UserInput;
 

@@ -1,4 +1,4 @@
-package homeworks._20_05.pizza;
+package homeworks._05_20.pizza;
 
 public class PizzaApp {
     public static void main(String[] args) {

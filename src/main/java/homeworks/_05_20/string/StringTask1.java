@@ -1,4 +1,4 @@
-package homeworks._20_05.string;
+package homeworks._05_20.string;
 
 public class StringTask1 {
     public static void main(String[] args) {

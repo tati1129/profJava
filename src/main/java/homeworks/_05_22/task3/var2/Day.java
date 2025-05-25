@@ -1,4 +1,4 @@
-package homeworks._20_05.todoList;
+package homeworks._05_22.task3.var2;
 
 public enum Day {
     MONDAY,
@@ -8,5 +8,4 @@ public enum Day {
     FRIDAY,
     SATURDAY,
     SUNDAY
-
 }
