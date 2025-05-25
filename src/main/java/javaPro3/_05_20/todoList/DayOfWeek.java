@@ -1,6 +1,4 @@
-package javaPro3._20_05.todoList;
-
-import java.util.Arrays;
+package javaPro3._05_20.todoList;
 
 public class DayOfWeek {
     private String day;

@@ -1,4 +1,4 @@
-package javaPro3._20_05.pizza2;
+package javaPro3._05_20.pizza2;
 
 public class Pizza {
     private double diametr;

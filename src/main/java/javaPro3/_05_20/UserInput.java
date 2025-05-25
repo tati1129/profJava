@@ -1,4 +1,4 @@
-package javaPro3._20_05;
+package javaPro3._05_20;
 
 import java.util.Scanner;
 

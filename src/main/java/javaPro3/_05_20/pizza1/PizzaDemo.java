@@ -1,4 +1,4 @@
-package javaPro3._20_05.pizza1;
+package javaPro3._05_20.pizza1;
 
 public class PizzaDemo {
     public static void main(String[] args) {

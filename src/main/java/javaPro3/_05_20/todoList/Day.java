@@ -1,4 +1,4 @@
-package javaPro3._20_05.todoList;
+package javaPro3._05_20.todoList;
 
 public enum Day {
     MONDAY,

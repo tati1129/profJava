@@ -1,4 +1,4 @@
-package javaPro3._20_05.random;
+package javaPro3._05_20.random;
 
 public class RandomWithMath {
     public static void main(String[] args) {

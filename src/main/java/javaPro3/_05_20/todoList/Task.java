@@ -1,4 +1,4 @@
-package javaPro3._20_05.todoList;
+package javaPro3._05_20.todoList;
 
 public class Task {
     private static int taskCounter = 1; // счётчик для всех задач

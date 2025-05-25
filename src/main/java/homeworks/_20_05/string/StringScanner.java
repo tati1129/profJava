@@ -1,6 +1,6 @@
 package homeworks._20_05.string;
 
-import javaPro3._20_05.UserInput;
+import javaPro3._05_20.UserInput;
 
 public class StringScanner {
     public static void main(String[] args) {
