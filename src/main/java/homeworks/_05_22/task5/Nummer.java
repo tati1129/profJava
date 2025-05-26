@@ -28,6 +28,8 @@ public class Nummer {
     public static boolean ishappyDigits(String input) {
         if (!isInteger(input)) {
             return false;
+        }
+
         int happyNummer;
         int[] num = new int[4];
         for (int i = 0; i < input.length(); i++) {
